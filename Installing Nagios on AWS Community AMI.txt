@@ -1,0 +1,21 @@
+Installing Nagios on AWS Community AMI
+----------------------------------------
+1. log into the AWS console lanuch instance completly pre build for Nagios under Community AMI's
+2. Select NagiosXI Infrastructure Monitoring and Launch as default setting in config Instance Deatils
+3. Enable the HTTP port in that Insatnce using config security group port 80 is added then Launch
+4. open browser and type http://ip of your instance/nagiosxi
+5. An admin console of Nagios has been opend give user name =nagiosadmin pwd =(ggItf7roDrDhNG$QYEU$) 
+6. Select Time zone and then click install 
+7. In Nagios console select wizard in config wizard
+8. In this Case select Linux and give Instance IP in that console 
+9. NRPE Monitor Wizard in Nagios Console seet the Instance Monitor status which you selected
+--------------------------------------------------
+To Install in Nagios agnet on monitoring machine-------
+----------------------------------------------- 
+1. Log on to Agent (Monitored) machine 
+2. Run this command wget https://assets.nagios.com/downloads/nagiosxi/agents/linux-nrpe-agent.tar.gz
+3. tar xvf linux-nrpe-agent
+4. cd linux-nrpe-agent
+5. sudo ./fullinstall
+6. Above cmd is running last step give the Nagios Server IP
+7. go to Nagios Console view the agent monitoring output

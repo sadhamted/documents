@@ -1,0 +1,35 @@
+Installation of Jenkins stand alone
+-----------------------------------
+step1 $ wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+
+
+step2 $ echo deb https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list
+
+step3 $sudo apt-get update
+
+
+step4 $sudo apt-get install jenkins
+
+
+Using systemctl we'll start Jenkins:-
+----------------------------------
+step5 sudo systemctl start jenkins
+
+step6 $sudo systemctl status jenkins
+
+Opening the Firewall
+-------------------------------
+By default, Jenkins runs on port 8080, so we'll open that port using ufw:
+step7 $sudo ufw allow 8080
+
+step8 $sudo ufw status
+
+ Setting up Jenkins
+To set up our installation, we'll visit Jenkins on its default port, 8080, using the server domain name or IP address: http://ip_address_or_domain_name:8080
+--------------------------------------
+step9 $sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+    3ef6c27707a04643ae3e3f6c57401509
+
+-----------------------------------------------------------------
+jenkins username sadham	pwd Sadham@19
+
